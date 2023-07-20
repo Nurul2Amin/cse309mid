@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Poppins:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+        <nav>
+            <a href="portfolio.html"><img src="images/logo123.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-circle-xmark" onclick="hideMENU()"></i>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMENU()"></i>
+        </nav>
+        </div>
+        
+    <div class="text-box">
+        <h2>Hi, My name is <br><span>Nurul Amin</span></h2>
+        <p>
+            This is my Portfolio showcasing my <br>
+            <span>Skills</span> and <span>Experiences</span>
+        </p>
+        <a href="" class="chuck"> Download CV</a>
+    </div>
+                
+    </div>
+
+    <!-- --------about------------ -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="about">
+        <div class="container" style="margin: 25px;">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/123.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p class="sub-para">Hi there! I'm Nurul Amin, a passionate Web Developer with a love for coding. I
+                        believe in continuous learning and embracing creativity to make a positive impact in Computer
+                        Science. Let's connect and create something amazing together!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skill')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skill">
+                        <ul>
+                            <li><span>UI/UX</span><br>Design Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Design Web/App Interfaces</li>
+                            <li><span>App DEvelopment</span><br>Design Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Present</span><br>Design Web/App Interfaces</li>
+                            <li><span>2021 - 2022</span><br>Design Web/App Interfaces</li>
+                            <li><span>2020 - 2021</span><br>Design Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020 - Present</span><br>Design Web/App Interfaces</li>
+                            <li><span>2019</span><br>Design Web/App Interfaces</li>
+                            <li><span>2017</span><br>Design Web/App Interfaces</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <!-- --------end about------------ -->
+
+    <!-----------projects ---------------->
+    <div id="projects">
+        <div class="container" style="margin: 80px;">
+            <h1 class="sub-title">My Projects</h1>
+            <div class="project-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>khfksfaj hkjshfk hskfhksfk sk</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>Web Design</h2>
+                    <p>khfksfaj hkjshfk hskfhksfk sk</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>Web Design</h2>
+                    <p>khfksfaj hkjshfk hskfhksfk sk</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------end projects ---------------->
+    <!-------------contact------------------------>
+    <div id="contact">
+        <div class="container" style="margin: 80px">
+            <div class="row">
+                <div class="contact-right">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+                <div class="contact-left">
+                    <p><i class="fa-solid fa-paper-plane"></i>2010386@iub.edu.bd</p>
+                    <p><i class="fa-solid fa-square-phone"></i>01787775388</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                        <a href=""><i class="fab fa-twitter-square"></i></a>
+                        <a href=""><i class="fab fa-instagram"></i></a>
+                        <a href=""><i class="fab fa-linkedin"></i></a>
+                    </div>
+                  
+                </div>
+                
+
+        </div>
+        <div class="copyright">
+            <p class="copy">Copyright <i class="fa-regular fa-copyright"></i> Nurul.</p>
+        </div>
+    </div>
+    <!-------------end contact------------------------>
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        
+        function showMENU(){
+            navLinks.style.right = "0";
+        }
+        function hideMENU(){
+            navLinks.style.right = "-250px";
+        }
+        
+    </script>
+</body>
+
+</html>
